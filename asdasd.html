@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1><strong>caculator</strong></h1>
+<input  type="text" width="200px"id="A">
+<input  type="text" width="200px"id="B">
+<br>
+<button type="button"onclick="add()";width="200px">Additon(+)</button>
+<button type="button"onclick="sub()";width="200px">Subtraction(-)</button>
+<button type="button"onclick="multi()";width="200px">Multiplication(X)</button>
+<button type="button"onclick="per()";width="200px">Division(/)</button>
+<div id="result"</div>
+<script>
+    function add(){
+        var C= +document.getElementById('A').value;
+        var D= +document.getElementById('B').value;
+
+        var result = C + D;
+        document.getElementById('result').innerHTML =result;
+
+    }
+    function sub() {
+        var C = +document.getElementById('A').value;
+        var D = +document.getElementById('B').value;
+
+        var result = C - D;
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function multi() {
+        var C = +document.getElementById('A').value;
+        var D = +document.getElementById('B').value;
+
+        var result = C * D;
+        document.getElementById('result').innerHTML = result;
+    }
+
+    function per (){
+        var C = +document.getElementById('A').value;
+        var D = +document.getElementById('B').value;
+
+        var result = C / D;
+        document.getElementById('result').innerHTML = result;
+    }
+
+
+
+
+</script>
