@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+<fieldset style="background-color: aliceblue; width: 750px;">
+<div style="text-align: center; width: 600px; font-size: 30px" ><strong>Chuyen Doi Tien Te </strong>
+<table style ="width: 600px" >
+   <tr style="text-align: left;font-size: 25px">
+       <th><strong>Amount</strong></th>
+       <th><strong>From Currency</strong></th>
+       <th><strong>To Currency</strong></th>
+   </tr >
+
+    <tr style="text-align: left;width: 30px;">
+        <td>
+            <input type="number" name="amount" id="Amount";>
+        </td>
+
+
+
+        <td>
+            <select id="fCurrency" style="width: 100px;" name="from">
+                <option selected>VND</option>
+                <option>USD</option>
+                <option>Euro</option>
+            </select>
+    </td>
+        <td>
+            <select id="TCurrency" style="width: 100px;" name="to">
+                <option >VND</option>
+                <option selected>USD</option>
+                <option>Euro</option>
+            </select>
+        </td>
+    </tr>
+</table>
+</div>
+
+<button type="button" onclick=dosh() style="color:red">convert</button><br>
+<h3 text-align="center" id="result"style="color:blue" ;>result:</h3>
+
+<script>
+    function dosh() {
+        let So = document.getElementById("Amount").value;
+        let so1 = document.getElementById("fCurrency").value;
+        let so2 = document.getElementById("TCurrency").value;
+
+        if (so1 == "VND" && so2 == "USD") {
+            let c = So / 23000;
+
+
+            document.getElementById("result").innerHTML = "result = " + c
+
+        } else if (so1 == "USD" && so2 == "USD") {
+            let d = So ;
+
+
+            document.getElementById("result").innerHTML = "result = " + d
+
+
+
+        }
+     else if (so1 == "USD" && so2 == "VND") {
+        let d = So * 23000 ;
+
+
+        document.getElementById("result").innerHTML = "result = " + d
+
+
+
+    }   else if (so1 == "VND" && so2 == "VND") {
+        let d = So ;
+
+
+        document.getElementById("result").innerHTML = "result = " + d
+
+
+
+    }
+    }
+    </fieldset>
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
