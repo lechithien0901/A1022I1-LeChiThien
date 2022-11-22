@@ -6,21 +6,8 @@
     </head>
     <body>
     <script>
-      let a = +prompt('nhap so diem của các bài kiểm tra');
-      let b = +prompt('nhập số điểm thi giữa kì');
-      let c = +prompt('nhập số điểm thi học  kì');
-      let value = (a + b*2 +c*3)/6;
-              if(value>=8){
-                  alert('học sinh đạt loại giỏi');
-              }
-      else if(value>=6.5){
-          alert('học sinh đạt loại khá');
-      }
-      else if(value>=3.5){
-          alert('học sinh đạt loại trung bình')
-      }
-    else
-        {
-            alert('học sinh kém');
-      }
+      let dongia =+prompt('mời nhập đơn giá của sản phẩm ');
+      let soluong =+prompt('mời nhập số lượng hàng hóa đã bán');
+      let doanhso= dongia*soluong;
+      alert('số doanh thu tháng này là :'+ doanhso );
    </script>
