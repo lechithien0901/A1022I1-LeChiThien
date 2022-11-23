@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    let congsuat =+prompt('mơi nhap cong suat cua thiet bi sinh hoat trong nha` ban');
+    let thoigian =+prompt('thoi gian ban su dung thiet bi bao nhieu gio');
+
+    let thietbitieuthu = congsuat*thoigian;
+    let dongia1=1.687;
+    let dongia2= 1.734;
+    let dongia3= 2.014;
+    let dongia4= 2.536;
+    let dongia5= 2.834;
+    let dongia6= 2.927;
+    let VND;
+    let tiendien1 =thietbitieuthu*dongia1;
+    if (thietbitieuthu>=0&&thietbitieuthu<=50){
+        alert('tien dien su dung la` ' +tiendien1+"VND")
+    }
+    let tiendien2 =thietbitieuthu*dongia2;
+    if (thietbitieuthu>=51&&thietbitieuthu<=100){
+        alert('tien dien su dung la` ' +tiendien2+"VND")
+    }
+    let tiendien3 =thietbitieuthu*dongia3;
+    if (thietbitieuthu>=101&&thietbitieuthu<=200){
+        alert('tien dien su dung la` ' +tiendien3+"VND")
+    }
+    let tiendien4 =thietbitieuthu*dongia4;
+    if (thietbitieuthu>=201&&thietbitieuthu<=300){
+        alert('tien dien su dung la` ' +tiendien4+"VND")
+    }
+    let tiendien5 =thietbitieuthu*dongia5;
+    if (thietbitieuthu>=301&&thietbitieuthu<=400){
+        alert('tien dien su dung la` ' +tiendien5+"VND")
+    }
+    let tiendien6 =thietbitieuthu*dongia6;
+    if (thietbitieuthu>=401){
+        alert('tien dien su dung la` ' +tiendien6+"VND")
+    }
+
+
+</script>
