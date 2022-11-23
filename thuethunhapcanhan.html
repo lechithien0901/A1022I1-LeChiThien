@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+    let thunhap = +prompt('xin mời bạn nhập mức thu nhập của mình ');
+    let thue1=thunhap*(5/100);
+    let thue2=(thunhap*(10/100))-0.25;
+    let thue3=(thunhap*(15/100))-0.75;
+    let thue4=(thunhap*(20/100))-1.65;
+    let thue5=(thunhap*(25/100))-3.25;
+    let thue6=(thunhap*(30/100))-5.85;
+    let thue7=(thunhap*(35/100))-9.85;
+    let tr;
+    if(thunhap<=5){
+        alert('thuế cần  phải nộp là :'+thue1+"tr");
+
+    }
+    if(thunhap> 5&& thunhap<=10){
+        alert('thuế cần  phải nộp là :'+thue2+"tr");
+
+    }
+    if(thunhap>10 && thunhap<=18){
+        alert('thuế cần  phải nộp là :'+thue3+"tr");
+
+    }
+    if(thunhap>18 && thunhap<=32){
+        alert('thuế cần  phải nộp là :'+thue4+"tr");
+
+    }
+    if(thunhap>32 && thunhap<=52){
+        alert('thuế cần  phải nộp là :'+thue5+"tr");
+
+    }
+    if(thunhap>52 && thunhap<=80){
+        alert('thuế cần  phải nộp là :'+thue6+"tr");
+
+    }
+    if(thunhap>80){
+        alert('thuế cần  phải nộp là :'+thue7+"tr");
+
+    }
+</script>
