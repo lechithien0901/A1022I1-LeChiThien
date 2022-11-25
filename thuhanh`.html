@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script language="javascript">
+    let sout, i, j;let result;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = 1;j = 1;
+    while (j <=9) {
+        sout = sout + "<tr>";
+        while (i <= 9) {
+            result=i*j;
+            sout=sout+"<td>"+i+"x"+j+"="+result+"</td>";
+
+            i++;
+        }
+        sout = sout + "</tr>";
+        i= 1;
+        j++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+
+
+
+
+
+
+
+
+
+
