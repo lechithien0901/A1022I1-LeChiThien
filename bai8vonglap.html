@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Doan so</title>
+</head>
+<body>
+<button onclick="game()"id="play">Chơi</button>
+</body>
+<script>
+  function game() {
+      let count = 0;
+      let kiemtraso=Math.floor(Math.random()*100)
+      let nhapso;
+      do {
+          count++
+          nhapso=+prompt('xin mời bạn nhập số vào đây');
+          if(nhapso==kiemtraso){
+              alert('chinhxac');
+              break;
+          }
+          else {
+              if(nhapso>kiemtraso){
+                  alert('số đã lớn hơn')
+              }
+              if(nhapso<kiemtraso){
+                  alert('so da be hon')
+              }
+              if(count<3){
+                  alert('moi nhap lai so ')
+              }
+          }
+
+      }while(count!=3)
+      alert('tro choi ket thuc');
+
+  }
+</script>
