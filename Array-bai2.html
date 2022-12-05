@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--</body>-->
+<!--<script>-->
+<!--    let inputArray = [];-->
+
+<!--    for (let i = 0; i < 10; i++) {-->
+<!--        inputArray[i] = +prompt("Nhập giá trị của mãng tại vị trí " + i);-->
+
+<!--    }-->
+
+<!--    let max = inputArray[0];-->
+<!--    for (let i = 0; i < inputArray.length; i++) {-->
+<!--        if (max < inputArray[i]) {-->
+<!--            max = inputArray[i]-->
+<!--        }-->
+<!--    }-->
+<!--    document.write("Giá trị lớn nhất là " + max + " tại vị trí thứ " + inputArray.indexOf(max));-->
+
+<!--</script>-->
+
+
+<!--bai` 3-->
+<!--<script>-->
+<!--let inputArray =[];-->
+<!--for (let i = 0;  ; i++) {-->
+<!--    let text =prompt("xin moi nhap so vao day " + i + '(neu muon dung hay bam "S")');-->
+<!--    if (text === "S") {-->
+<!--        break;-->
+<!--    }-->
+<!--    inputArray.push(parseInt(text));-->
+<!--    }-->
+<!--    let max = inputArray[0];-->
+<!--    let tong = 0;-->
+<!--    for (let i = 0; i < inputArray.length; i++) {-->
+<!--        if (max < inputArray[i]) {-->
+<!--            max = inputArray[i];-->
+<!--        }-->
+<!--            tong += inputArray[i];-->
+
+
+
+<!--    }-->
+<!--    document.write("gia tri lon nhat cua ham do la" + max + "<br>");-->
+<!--    document.write('trung binh cua mang do la`:' + tong/inputArray.length);-->
+<!--    </script>-->
+
+
+
+<!--// </script>-->
+<!--// bai4-->
+<!--// <!DOCTYPE html>-->
+<!--// <html lang="en">-->
+<!--// <head>-->
+<!--//     <meta charset="UTF-8">-->
+<!--//     <title>Title</title>-->
+<!--// </head>-->
+<!--// <body>-->
+<!--<script>-->
+<!--let inputArray =[]-->
+
+
+
+<!--for (let i = 0; i < 10; i++) {-->
+<!--    inputArray[i] = +prompt("moi nhap so vao trong mang tai:" + i)-->
+
+<!--let first = 0;-->
+<!--let last =inputArray.length-1;-->
+
+
+<!--    while (first < last) {-->
+<!--        let b = inputArray[first];-->
+<!--        inputArray[first] = inputArray[last];-->
+<!--        inputArray[last] = b;-->
+
+<!--        first++;-->
+<!--        last&#45;&#45;;-->
+<!--    }-->
+<!--bai5-->
+
+
+<!--}-->
+<!--document.write(inputArray);-->
+<!--</script>-->
+<!--bai5-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;:-->
+<!--<script>-->
+<!--    let arr = [];-->
+<!--    let count=0;-->
+<!--    for (let i = 0; i <3; i++) {-->
+<!--        arr[i] = +prompt("moi ban nhap so ban can nhap vao day" + i)-->
+<!--        if ((arr[i] < 0)) {-->
+<!--            document.write(arr[i]+"<br>")-->
+
+
+<!--        }-->
+<!--    count++-->
+<!--    }-->
+<!--    document.write("so le co trong mang la`"+count);-->
+<!--</script>-->
+<!--bai6-->
+<!--<script>-->
+<!--    let arr=[];-->
+
+<!--    for (let i = 0; i <3 ; i++) {-->
+<!--        arr[i]=+prompt("xin moi nhap so vao day "+i);-->
+
+<!--    }-->
+<!--    let V=+prompt("moi nhap so ban can tra vao day");-->
+<!--    if (arr.indexOf(V)!==-1){-->
+<!--        document.write("V is in the array")-->
+<!--    }-->
+<!--    else {-->
+<!--        document.write("V is not in the array")-->
+<!--    }-->
+
+<!--</script>-->
+<!--bài 7-->
+<!--<script>-->
+<!--    let arrs=[];-->
+<!--    for (let i = 0; i <5; i++) {-->
+<!--        arrs[i]=+prompt("xin moi nhap so ban vao day"+i);-->
+
+
+<!--    }-->
+<!--    let num = +prompt("xin moi nhap so kiem tra vao day");-->
+<!--    let T=arrs.indexOf(num)-->
+<!--    if(arrs.includes(num)){-->
+<!--        arrs.splice(T,1)-->
+<!--    }-->
+<!--    document.write(arrs)-->
+<!--</script>-->
+<!--bai 8-->
+<!--<script>-->
+<!--let arr=[];-->
+<!--for (let i = 0; i <10 ; i++) {-->
+<!--arr[i]=+prompt("xin moi nhap so vao day"+i)-->
+
+
+<!--}-->
+
+<!--for (let i = 0; i <10 ; i++) {-->
+<!--    for (let j = 9; j >=i ; j&#45;&#45;) {-->
+<!--        if (arr[j]>=arr[j-1]){-->
+
+
+<!--            [arr[j],arr[j-1]]=[arr[j-1],arr[j]]-->
+<!--        }-->
+
+<!--    }-->
+
+<!--}-->
+<!--document.write(arr)-->
+<!--</script>-->
+<!--bai` 9-->
+<!--<script>-->
+<!--    let c=[];-->
+<!--    let a=[];-->
+<!--    let b=[];-->
+<!--    for (let i = 0; i <10 ; i++) {-->
+<!--        a[i]=+prompt("xin moi nhap 10 so dau cua day dau vao day"+i)-->
+
+<!--    }-->
+<!--    for (let i = 0; i <10; i++) {-->
+<!--        b[i]=+prompt("xin moi nhap 10 so thu hai vao day")-->
+
+<!--    }-->
+<!--    -->
+<!--    let t=a.concat(b);-->
+<!--    c.push(t);-->
+<!--    document.write(c)-->
+
+<!--</script>-->
+<!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--luyen tap mang 2 - bai 1-->
+
+<!--<script>-->
+<!--  let a=[-->
+<!--      [1, 2, 1, 24],-->
+<!--      [8, 11, 9, 4],-->
+<!--      [7, 0, 7, 27],-->
+<!--      [7, 4, 28, 14],-->
+<!--      [3, 10, 26, 7]-->
+<!--  ];-->
+<!--  for (let i = 0; i <a.length ; i++) {-->
+<!--      document.write("row"+i+":")-->
+<!--      for (let j = 0; j < a[i].length; j++) {-->
+<!--          document.write(a[i][j]+"")-->
+
+<!--      }-->
+<!--  document.write("<br>")-->
+
+<!--  }-->
+<!--</script>-->
+<!--luyen tap mang 2-bai 2-->
+
+
+
+
+
+
+
+
+<!--<script>-->
+<!--   let array=[];-->
+<!--       let result;-->
+<!--   let text-->
+<!--   for (let i = 0;  ; i++) {-->
+<!--    text=prompt("xin moi nhap ki tu hoac so vao day "+":"+i+"(dung lai bam 'D')")-->
+<!--       if(text==='D'){-->
+<!--           break;-->
+<!--       }-->
+<!--   array.push(text);-->
+
+
+
+<!--   }-->
+<!--   result=array.reverse();-->
+<!--   for (let i = 0; i <result.length ; i++) {-->
+<!--       document.write(result[i])-->
+
+<!--   }-->
+
+
+<!--</script>-->
+<!--bai 3-->
+<!--<script>-->
+<!--    let array=[];-->
+<!--    let count=0;-->
+<!--    array.length=+prompt("nhap kich thuoc cua mang");-->
+<!--    for (let i = 0; i <array.length ; i++) {-->
+<!--        array[i]=prompt("moi nhap ki tu vao day "+i)-->
+<!--        if (array[i]-array[i]===0){-->
+<!--            count++;-->
+
+<!--        }-->
+
+
+<!--    }-->
+<!--    document.write("so ki tu trong mang la "+count)-->
+
+<!--</script>-->
+<!--luyen tap mang 2 -bai 4-->
+<!--<script>-->
+<!--    let array=[]-->
+<!--    let count=0;-->
+<!--    array.length=+prompt("xin moi nhap chuoi ki tu vao day")-->
+<!--    for (let i = 0; i <array.length ; i++) {-->
+<!--        array[i]=+prompt("moi nhap ki tu tai vi tri "+i)-->
+<!--        if (array[i]-array[i]!==0){-->
+<!--            count++-->
+<!--        }-->
+
+<!--    }-->
+<!--    document.write("so ki tu trong chuoi la`"+count)-->
+<!--</script>-->
+<!--luyen tap mang 2 -bai5-->
+<!--<script>-->
+<!--    let array1=[];-->
+<!--    let array2=[];-->
+
+<!--   array1=prompt("nhap vao chuoi 1");-->
+<!--   array2=prompt("nhap vao chuoi 2");-->
+<!--   if (array2===array1){-->
+<!--       document.write("2 chuoi giong nhau")-->
+<!--   }-->
+<!--   else {-->
+<!--       document.write("2 chuoi khac nhau")-->
+<!--   }-->
+
+
+
+<!--</script>-->
+<!--bai 6-->
+<!--<script>-->
+<!--    let array=[]-->
+
+<!--       array.length=+prompt("xin moi nhap chuoi ki tu vao day")-->
+<!--    for (let i = 0; i <array.length ; i++) {-->
+<!--        array[i]=prompt("xin moi nhap ki tu vao chuoi tai vi tri"+i)-->
+<!--        if (array[i]==="-"){-->
+<!--            array[i]="_"-->
+
+<!--        }-->
+
+<!--    }-->
+<!--    document.write(array)-->
+<!--</script>-->
+
+
+
+
+
+
+
+
+
+
+
