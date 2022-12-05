@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>TuDien</h2>
+<form>
+    <input type="text" id="a">
+    <button onclick="search()">Search</button>
+    <p id="result"></p>
+</form>
+<script>
+
+    let english = ["dog",
+        "cat",
+        "chicken",
+        "Cow",
+        "Calf",
+        "duck",
+        "fox",
+        "lion",
+        "bear",
+        "elephant",
+        "wolf",
+        "Lazy Fat Dog",
+        ]
+        let vetnam = [
+        "cho",
+        "meo",
+        "ga",
+        "bo",
+        "be",
+        "vit",
+        "cao",
+        "su tu",
+        "gau",
+        "voi",
+        "soi",
+        "Đột"
+
+
+    ]
+    let input=prompt("moi ban nhap con vat vao day")
+    if(vetnam.indexOf(input)!==-1) {
+        document.write("co ten tieng anh la " + input+ ":"+ english[vetnam.indexOf(input)]);
+    }
+    else {
+        document.write("not found")
+    }
+
+
+</script>
+</body>
+</html>
