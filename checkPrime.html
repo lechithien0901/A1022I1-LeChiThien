@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number > 1) {
+            let dem = 0;
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    dem++;
+                }
+            }
+            return (dem === 2);
+        }
+    }
+    let so=+prompt("Enter number:");
+    if(isPrime(so)){
+        document.write(so+" so nay` la` so nguyen to");
+    }
+    else{
+        document.write(so+" khong phai la` so nguyen to'");
+    }
+</script>
+
+</body>
+</html>
