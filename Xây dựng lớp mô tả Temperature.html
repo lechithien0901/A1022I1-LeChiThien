@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        getC(){
+            return (this.c*9/5)+32
+        }
+        getC1(){
+            return this.c+273.15
+        }
+    }
+    let result=new Temperature(25)
+    document.write("Nhiệt độ  biến đổi từ độ C sang độ F là:"+result.getC())
+    document.write("<br>")
+    document.write("Nhiệt độ  biến đổi từ độ C sang độ K là:"+result.getC1())
+
+</script>
+
+</body>
+</html>
