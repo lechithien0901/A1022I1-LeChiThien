@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" ></canvas>
+<script>
+    class Rectangle{
+        constructor(wide,long) {
+            this.wide=wide;
+            this.long=long;
+        }
+        Area(){
+            return this.long*this.wide;
+        }
+        Perimeter(){
+            return (this.wide+this.long)*2;
+        }
+
+    }
+    let result=new Rectangle(70,80)
+    console.log(result.Area())
+    console.log(result.Perimeter())
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.strokeStyle = "blue";
+    ctx.strokeRect(0,0,result.wide,result.long);
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
