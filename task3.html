@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<!--<script>-->
+
+
+<!--    function prefixSum(arr) {-->
+<!--        let b=[];-->
+<!--        let j=0;-->
+<!--        let sum=0;-->
+<!--        for (let i = 0; i <arr.length ; i++) {-->
+<!--            sum=0;-->
+<!--            j=0;-->
+<!--            while(j<=i){-->
+<!--                sum+=arr[j];-->
+<!--                j++;-->
+<!--            }-->
+<!--            b[i]=sum;-->
+<!--        }-->
+<!--        return b;-->
+<!--    }-->
+<!--    let a=[];-->
+<!--    let n=+prompt("Độ dài mảng a:");-->
+<!--    for (let i = 0; i <n ; i++) {-->
+<!--        a[i]=+prompt("Nhập giá trị thứ "+i+":");-->
+<!--    }-->
+<!--    let result=prefixSum(a);-->
+<!--    document.write("Tổng các tiền tố trong mảng :"+result);-->
+
+<!--</script>-->
+<script>
+    function prefixSums(arr) {
+        let b=[];
+        let sum=0;
+        let so=0;
+        for (let i = 0; i <arr.length ; i++) {
+            let so=0;
+            let sum=0;
+            while(so<=i){
+                sum+=arr[so];
+                so++;
+
+            }
+             b[i]=sum;
+
+        }
+        return b;
+
+
+    }
+    let a=[];
+    let arrlength=+prompt("xin moi ban nhap cac so vao day")
+    for (let i = 0; i <arrlength ; i++) {
+        a[i]=+prompt("xin moi ban nhap so tai vi tri "+i)
+
+
+    }
+    let result=prefixSums(a)
+    document.write(result)
+</script>
+</html>
