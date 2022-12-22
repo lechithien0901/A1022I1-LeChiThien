@@ -1,3 +1,38 @@
+<!--task3 bai 1-->
+
+
+<!--</script>-->
+<!--<script>-->
+<!--    function prefixSums(arr) {-->
+<!--        let b=[];-->
+<!--        let sum=0;-->
+<!--        let so=0;-->
+<!--        for (let i = 0; i <arr.length ; i++) {-->
+<!--            let so=0;-->
+<!--            let sum=0;-->
+<!--            while(so<=i){-->
+<!--                sum+=arr[so];-->
+<!--                so++;-->
+
+<!--            }-->
+<!--             b[i]=sum;-->
+
+<!--        }-->
+<!--        return b;-->
+
+
+<!--    }-->
+<!--    let a=[];-->
+<!--    let arrlength=+prompt("xin moi ban nhap cac so vao day")-->
+<!--    for (let i = 0; i <arrlength ; i++) {-->
+<!--        a[i]=+prompt("xin moi ban nhap so tai vi tri "+i)-->
+
+
+<!--    }-->
+<!--    let result=prefixSums(a)-->
+<!--    document.write(result)-->
+<!--</script>-->
+<!--task 3bai 2-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,62 +40,84 @@
     <title>Title</title>
 </head>
 <body>
+
 </body>
 <!--<script>-->
+<!-- let a=[];-->
+<!--   a.length =+prompt("xin mời bạn nhập độ dài của A vào đây")-->
+<!-- for (let i = 0; i <a.length ; i++) {-->
+<!--     a[i]=+prompt("xin mời bạn nhập mảng A tại ví trí thứ "+i)-->
+
+<!-- }-->
+<!-- let b=[];-->
+<!--  b.length=+prompt("xin mời bạn nhập độ dài của B vào đây")-->
+<!-- for (let i = 0; i <b.length ; i++) {-->
+<!--     b[i]=+prompt("xin mời bạn nhập mảng B tại ví trí thứ"+i)-->
 
 
-<!--    function prefixSum(arr) {-->
-<!--        let b=[];-->
-<!--        let j=0;-->
-<!--        let sum=0;-->
-<!--        for (let i = 0; i <arr.length ; i++) {-->
-<!--            sum=0;-->
-<!--            j=0;-->
-<!--            while(j<=i){-->
-<!--                sum+=arr[j];-->
-<!--                j++;-->
-<!--            }-->
-<!--            b[i]=sum;-->
-<!--        }-->
-<!--        return b;-->
-<!--    }-->
-<!--    let a=[];-->
-<!--    let n=+prompt("Độ dài mảng a:");-->
-<!--    for (let i = 0; i <n ; i++) {-->
-<!--        a[i]=+prompt("Nhập giá trị thứ "+i+":");-->
-<!--    }-->
-<!--    let result=prefixSum(a);-->
-<!--    document.write("Tổng các tiền tố trong mảng :"+result);-->
+<!-- }-->
+<!-- let c=[];-->
+<!-- let dem =0;-->
+<!-- for (let i = 0; i <a.length ; i++) {-->
+<!--     for (let j = 0; j <b.length ; j++) {-->
+<!--         if(a[i]===b[j]){-->
+<!--             c[dem]=a[i]-->
+<!--             dem++;-->
+<!--         }-->
+
+<!--     }-->
+
+<!-- }-->
+<!-- for (let i = 0; i <c.length ; i++) {-->
+<!--     a.splice(a.indexOf(c[i]),1)-->
+
+
+<!-- }-->
+<!-- document.write(a)-->
+
 
 <!--</script>-->
-<script>
-    function prefixSums(arr) {
-        let b=[];
-        let sum=0;
-        let so=0;
-        for (let i = 0; i <arr.length ; i++) {
-            let so=0;
-            let sum=0;
-            while(so<=i){
-                sum+=arr[so];
-                so++;
+<!--task3 bai3-->
 
-            }
-             b[i]=sum;
+  <script>
+      function isPrime( numerators,denominators) {
+          let result=[];
 
-        }
-        return b;
+          for (let i = 0; i <numerators.length ; i++) {
+              result[i]=numerators[i]/denominators[i];
 
 
-    }
-    let a=[];
-    let arrlength=+prompt("xin moi ban nhap cac so vao day")
-    for (let i = 0; i <arrlength ; i++) {
-        a[i]=+prompt("xin moi ban nhap so tai vi tri "+i)
+          }
+           let max=result[0];
+          for (let i = 1; i <result.length; i++) {
+              if(max<result[i]){
+                  max=result[i];
 
 
-    }
-    let result=prefixSums(a)
-    document.write(result)
-</script>
+              }
+
+              }
+          document.write(max + " giá trị lớn nhất tại vị trí  " + result.indexOf(max));
+
+
+
+
+
+      }
+      let a=[]
+      a.length=+prompt("xin mời bạn nhập độ dài của mảng A vào đây")
+      for (let i = 0; i <a.length ; i++) {
+          a[i]=+prompt("xin mời nhập số vào đây"+i)
+
+      }
+      let b=[]
+      b.length=+prompt("xin mời bạn nhập độ dài của mảng B vào đây")
+      for (let i = 0; i <b.length ; i++) {
+          b[i]=+prompt("xin mời nhập số vào đây"+i)
+
+      }
+      let result1=isPrime(a,b)
+      result1
+  </script>
 </html>
+
