@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // task 4 bai 1
+    // function WriteStandard(str){
+    //     let n=str.length;
+    //     for (let i = 0; i<n ; i++) {
+    //         if(i===0){
+    //             document.write(str[i].toUpperCase());
+    //         }
+    //         else if(str[i]===str[i+1]){
+    //             if(str[i]===" "){
+    //                 document.write(str[i]);
+    //                 document.write(str[i+2].toUpperCase());
+    //                 i+=2;
+    //             }
+    //         }
+    //         else if(str[i]===" ") {
+    //             document.write(str[i]);
+    //             document.write(str[i+1].toUpperCase());
+    //             i++;
+    //         }
+    //         else {
+    //             if(str[i-1]===" ")
+    //                 document.write(str[i].toUpperCase());
+    //             else{
+    //                 document.write(str[i].toLowerCase());
+    //             }
+    //         }
+    //     }
+    // }
+    // let a=prompt("Nhập chuỗi");
+    // document.write("Trước khi Chuẩn hóa :"+a+"<br>");
+    // document.write("Sau khi Chuẩn hóa :");
+    // WriteStandard(a);
+    // task4 bai 2
+
+     function different(s){
+         let count=1;
+         let a=s[0];
+         for (let i = 0; i <s.length ; i++) {
+             if(a!==s[i]&&s[i]!==" "){
+               count++;
+             }
+
+         }
+         if(count===1)count=0;
+         return count;
+     }
+     let str=prompt("Nhập xâu kí tự ");
+     let result=different(str);
+     document.write(result);
+     </script>
+
