@@ -41,20 +41,56 @@
     // WriteStandard(a);
     // task4 bai 2
 
-     function different(s){
-         let count=1;
-         let a=s[0];
-         for (let i = 0; i <s.length ; i++) {
-             if(a!==s[i]&&s[i]!==" "){
-               count++;
-             }
+     // function different(s){
+     //     let count=1;
+     //     let a=s[0];
+     //     for (let i = 0; i <s.length ; i++) {
+     //         if(a!==s[i]&&s[i]!==" "){
+     //           count++;
+     //         }
+     //
+     //     }
+     //     if(count===1)count=0;
+     //     return count;
+     // }
+     // let str=prompt("Nhập xâu kí tự ");
+     // let result=different(str);
+     // document.write(result);
+    let a=prompt("xin mời bạn nhập các kí tự của chuỗi thứ nhất vào đây")
+    let b=prompt("xin mời bạn nhập kí tự của của chuỗi thứ hai  vào đây")
+    function CharacterCount(s1,s2) {
+        let mang = {}
+        let chuoi1 = s1.split("")
+        let chuoi2 = s2.split("")
+        for (let i = 0; i < chuoi2.length; i++) {
+            let index = chuoi1.indexOf(chuoi2[i])
+            if (index >= 0) {
+                if (mang[chuoi2[i]]) {
+                    mang[chuoi2[i]] += 1
+                }
 
-         }
-         if(count===1)count=0;
-         return count;
-     }
-     let str=prompt("Nhập xâu kí tự ");
-     let result=different(str);
-     document.write(result);
+
+             else {
+                mang[chuoi2[i]] = 1
+
+            }
+            chuoi1.splice(index, 1)
+
+
+        }
+    }
+    console.log(JSON.stringify(mang))
+    let str="";
+    let sum=0;
+    for (let k of Object.keys(mang)) {
+        sum+=mang[k];
+        str+="ki tu "+k+":"+mang[k];
+    }
+    document.write(sum+"<br>")
+    document.write(str)
+    }
+    CharacterCount(a,b)
+
+
      </script>
 
