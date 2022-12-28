@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng hệ thống quản lý của học viên CODEGYM</title>
+</head>
+<body>
+<button type="button" onclick="createStudent()">Thêm mới học viên</button>
+<button type="button" onclick="alterStudent()">Sửa thông tin học viên</button>
+<button type="button" onclick="deleteStudent()">Xóa học viên</button>
+<br><br>
+<span id="result6"></span>
+
+<script>
+    class Student{
+        constructor(id, name, grade, email, birthday, module) {
+            this.id=id;
+            this.name=name;
+            this.grade=grade;
+            this.email=email;
+            this.birthday=birthday;
+           this.module=module;
+        };
+        setId(newId){
+            this.id=newId;
+        }
+        setName(newName){
+            this.name=newName;
+        }
+        setGrade(newGrade){
+            this.grade=newGrade;
+        }
+        setEmail(newEmail){
+            this.email=newEmail;
+        }
+        setBirthday(newBirthday){
+            this.birthday=newBirthday;
+
+        }
+        setModule(newModule){
+            this.module=newModule;
+        };
+
+
+    };
+    let students=[];
+    function update() {
+        let tableStudents=
+            '<table style="border : 1px ">'+
+                '<tr>' +
+                '<th style="width: 80px">danh sách mã học sinh</th>'+
+                '<th style="width: 180px">tên học viên </th>'+
+                '<th style="width: 60px">lớp</th>'+
+                '<th style="width: 200px">email</th>'+
+                '<th style="width: 100px">ngày sinh</th>'+
+                '<th style="width: 100px">module</th>'+
+            '</tr>';
+        for (let i = 0; i <students.length ; i++) {
+
+
+            tableStudents +=
+                '<tr>' +
+                '<td style="text-align: center">' + students[i].id + '</td>' +
+                '<td style="text-align: center">' + students[i].name + '</td>' +
+                '<td style="text-align: center">' + students[i].grade + '</td>' +
+                '<td style="text-align: center">' + students[i].email + '</td>' +
+                '<td style="text-align: center">' + students[i].birthday + '</td>' +
+                '<td style="text-align: center">' + students[i].module + '</td>' +
+                '</tr>'
+        };
+        document.getElementById("result6").innerHTML=tableStudents;
+    };
+    function formatId(num) {
+        if (num<10) return "HV-000"+num;
+        else if(num<100)return "HV-00"+num;
+        else if (num<1000) return "HV-0"+num;
+        else if (num>1000) return "HV"+num;
+
+
+
+    };
+    function checkId(so) {
+        if(students.length>0){
+
+                for (let i = 0; i <students.length ; i++) {
+                    if(so===students[i].id){
+                        alert("mã học sinh này đã có rồi")
+                        return true;
+
+
+                };
+
+            };
+        };
+
+    };
+    function formatBirthday(num) {
+        return num.slice(0,2)+"/"+num.slice(2,4)+"/"+num.slice(4,8);
+
+    };
+function checkName(str) {
+    if(str.length>50){
+        alert("kí tự đã vượt quá so với quy định");
+        return true;
+    }
+
+}
+function checkModule(so) {
+    if(so<1||so>6){
+        alert("số bạn  nhập bắt buộc phải nằm từ 1 đến 6")
+        return true;
+    }
+
+}
+function createStudent(){
+    let student=new Student();
+    let inputId;
+    do {
+        inputId=+prompt(" Id của sinh viên vào đây  ")
+        student.setId(formatId(inputId))
+    }while (checkId(student.id));
+    let inputName;
+    do {
+        inputName=prompt("xin mời nhập tên của sinh viên")
+
+    }while (checkName(inputName))
+    student.setName(inputName);
+    let inputGrade =prompt("xin mời nhập lớp của sinh viên ")
+    student.setGrade(inputGrade);
+    let inputEmail=prompt("nhập email của sinh viên ")
+    student.setEmail(inputEmail)
+   let inputBirthday=prompt("nhập ngày sinh ddmmyyyy")
+    student.setBirthday(formatBirthday(inputBirthday));
+    let inputModule
+    do {
+        inputModule=prompt("xin mời nhập module của  bạn vào đây")
+
+    }while (checkModule(inputModule))
+    student.setModule(inputModule)
+    students.push(student)
+    update()
+    return students;
+
+
+
+
+
+
+
+
+
+}function alterStudent()
+    {
+        let wanted = +prompt ("Nhập mã học viên cần sửa thông tin");
+        for (let i = 0; i < students.length; i++)
+        {
+            if (formatId(wanted) === students[i].id)
+            {
+                let wantedName;
+                do
+                {
+                    wantedName = prompt ("Nhập lại họ và tên học viên");
+                }
+                while (checkName(wantedName));
+                students[i].setName(wantedName);
+
+                let wantedGrade = prompt ("Nhập lại lớp học viên");
+                students[i].setGrade(wantedGrade);
+
+                let wantedEmail = prompt ("Nhập lại Email học viên");
+                students[i].setEmail(wantedEmail);
+
+                let wantedBirthday = prompt ("Nhập lại ngày tháng năm sinh học viên  (ddmmyyyy)");
+                students[i].setBirthday(formatBirthday(wantedBirthday));
+
+                let wantedModule;
+                do
+                {
+                    wantedModule = prompt ("Nhập lại module của học viên");
+                }
+                while (checkModule(wantedModule));
+                students[i].setModule(wantedModule);
+
+                update();
+                return students;
+            };
+        };
+        alert ("Không tìm thấy học viên có mã số này!");
+    };
+
+    function deleteStudent()
+    {
+        let wanted = +prompt ("Nhập mã học viên cần xóa thông tin");
+        for (let i = 0; i < students.length; i++)
+        {
+            if (formatId(wanted) === students[i].id)
+            {
+                students.splice(i, 1);
+                update();
+                return students;
+            };
+        };
+        alert ("không tìm thấy mã học viên có trên !");
+    };
+
+
+</script>
+
+</body>
+</html>
